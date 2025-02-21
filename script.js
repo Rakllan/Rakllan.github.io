@@ -37,24 +37,8 @@ function createFooter() {
     }
 }
 
-function createBubbles() {
-  const mainElement = document.querySelector('main');
-    if (!mainElement) return;
-
-    const bubblesContainer = document.createElement('div');
-    bubblesContainer.classList.add('bubbles');
-    mainElement.appendChild(bubblesContainer);
-
-    for (let i = 0; i < 10; i++) {
-        const bubble = document.createElement('div');
-        bubble.classList.add('bubble');
-        bubblesContainer.appendChild(bubble);
-    }
-}
-
 // --- Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
     createHeader();
     createFooter();
-    createBubbles();
 });
