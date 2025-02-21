@@ -1,0 +1,380 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f8f9fa; /* Very light gray */
+    color: #343a40; /* Dark gray */
+    line-height: 1.6;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+    padding-top: 100px;
+  }
+  
+  /* --- Header --- */
+  header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 40px);
+      max-width: 1200px;
+      z-index: 100;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-left: 1.5rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #343a40; /* Dark gray */
+    font-weight: 500;
+    transition: color 0.2s ease;
+    position: relative;
+    padding-bottom: 3px; /* Space for underline */
+  }
+  
+  nav a i {
+    margin-right: 0.3rem;
+    color: #6c757d; /* Slightly lighter gray */
+  }
+  
+  nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007bff; /* Bootstrap primary blue */
+    transition: width 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #007bff;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  /* --- Hero Section (index.html) --- */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 100px);
+    padding: 2rem;
+    text-align: center;
+      margin-top: 60px;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #343a40;
+  }
+  
+  .quote {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #6c757d;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* --- Projects List (projects.html) --- */
+  #projects-list {
+    max-width: 1200px;
+    margin: 100px auto 4rem; /* Top margin for header */
+    padding: 2rem;
+    width: 90vw;
+  }
+  
+  #projects-list h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #343a40;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #dee2e6;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .project-info {
+    padding: 1rem;
+  }
+  
+  .project-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #343a40;
+  }
+  
+  .project-info p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+  }
+  
+  /* --- Project Card Buttons --- */
+  .buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem; /* Space between buttons and tags */
+  }
+  
+  .buttons a {
+    flex: 1; /* Buttons take equal width */
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    text-align: center;
+    display: block; /* Important for consistent button sizing */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .explore-button {
+    background-color: #28a745; /* Bootstrap success green */
+    color: white;
+  }
+  
+  .github-button {
+    background-color: #343a40; /* Dark gray */
+    color: white;
+  }
+  
+  .explore-button:hover {
+    background-color: #218838; /* Darker green */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  .github-button:hover {
+    background-color: #23272b; /* Darker gray */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  }
+  /* --- Project Card Tags --- */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tag {
+    padding: 0.3rem 0.6rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #6c757d;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+  /* Tag Colors */
+  .tag.personal { background-color: rgba(0, 123, 255, 0.1); color: #007bff; border: 1px solid rgba(0, 123, 255, 0.3); }
+  .tag.public   { background-color: rgba(40, 167, 69, 0.1);  color: #28a745; border: 1px solid rgba(40, 167, 69, 0.3); }
+  .tag.heavy    { background-color: rgba(220, 53, 69, 0.1);  color: #dc3545; border: 1px solid rgba(220, 53, 69, 0.3); }
+  .tag.light    { background-color: rgba(255, 193, 7, 0.1);  color: #ffc107; border: 1px solid rgba(255, 193, 7, 0.3); }
+  /* --- Project Detail Page --- */
+  .project-detail {
+    max-width: 800px;
+    margin: 100px auto 4rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dee2e6;
+  }
+  
+  .project-detail h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #343a40;
+  }
+  
+  .project-detail img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  
+  .project-detail .project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: #6c757d;
+    font-size: 0.9rem;
+  }
+  
+  .project-detail h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #495057;
+  }
+  
+  .project-detail p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .project-detail ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 1rem;
+  }
+  
+  .project-detail li {
+    margin-bottom: 0.3rem;
+    color: #6c757d;
+  }
+  
+  .project-links {
+      text-align: center; /* Center the links */
+      margin-top: 2rem;
+  }
+  .project-links a{
+      margin: 10px; /* Add margin */
+  }
+  
+  /* --- Footer --- */
+  footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    text-align: center;
+    color: #6c757d;
+    border-top: 1px solid #dee2e6;
+    width: 100%;
+  }
+  
+  /* --- Bubbles Animation --- */
+  .bubbles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden; /* Hide overflowing bubbles */
+  }
+  
+  .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background-color: rgba(108, 99, 255, 0.1); /* Light purple */
+      animation: floatBubble linear infinite;
+  }
+  
+  /* Bubble sizes and animation durations */
+  .bubble:nth-child(1)  { width: 40px;  height: 40px;  animation-duration: 8s;  left: 10%;  top: 10%; }
+  .bubble:nth-child(2)  { width: 60px;  height: 60px;  animation-duration: 12s; left: 25%;  top: 60%; }
+  .bubble:nth-child(3)  { width: 30px;  height: 30px;  animation-duration: 10s; left: 70%;  top: 80%; }
+  .bubble:nth-child(4)  { width: 80px;  height: 80px;  animation-duration: 15s; left: 40%;  top: 30%; }
+  .bubble:nth-child(5)  { width: 50px;  height: 50px;  animation-duration: 9s;  left: 90%;  top: 15%; }
+  .bubble:nth-child(6)  { width: 20px; height: 20px; animation-duration: 11s;  left: 65%; top: 5%;  }
+  .bubble:nth-child(7)  { width: 70px;  height: 70px;  animation-duration: 14s; left: 5%;  top: 75%; }
+  .bubble:nth-child(8)  { width: 35px; height: 35px;  animation-duration: 7s;  left: 80%; top: 45%; }
+  .bubble:nth-child(9)  { width: 45px;  height: 45px; animation-duration: 13s;  left: 30%; top: 90%; }
+  .bubble:nth-child(10) { width: 55px; height: 55px; animation-duration: 16s;  left: 55%; top: 65%; }
+  
+  @keyframes floatBubble {
+      0% {
+          transform: translateY(0) scale(1);
+          opacity: 0.1;
+      }
+      50% {
+          opacity: 0.3;
+      }
+      100% {
+          transform: translateY(-120vh) scale(1.5); /* Move up and out of view */
+          opacity: 0;
+      }
+  }
+  
+  /* --- Remove Mode Toggle Styles (Light Mode Only) --- */
+  .mode-toggle {
+      display: none; /* Hide the toggle */
+  }
+  main {
+    padding-top: 100px; /* Increased top padding to account for header and toggle */
+  }
